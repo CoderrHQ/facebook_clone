@@ -1,7 +1,7 @@
 import 'package:facebook_clone/core/screens/error_screen.dart';
 import 'package:flutter/cupertino.dart';
 
-class Router {
+class Routes {
   static Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       default:
@@ -17,5 +17,5 @@ class Router {
         builder: (_) => view,
       );
 
-  Router._();
+  Routes._();
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '/config/routes/routes.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -15,6 +17,7 @@ class MainApp extends StatelessWidget {
           child: Text('Hello World'),
         ),
       ),
+      onGenerateRoute: Routes.onGenerateRoute,
     );
   }
 }
