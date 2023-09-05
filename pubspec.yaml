@@ -10,6 +10,39 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # firebase
+  cloud_firestore: ^4.8.4
+  firebase_auth: ^4.7.2
+  firebase_core: ^2.15.0
+  firebase_storage: ^11.2.5
+  
+  # birthday date picker
+  flutter_holo_date_picker: ^1.1.0
+
+  # for providing icons
+  font_awesome_flutter: ^10.5.0
+
+  # formatting dates and timeago
+  jiffy: ^6.2.1
+
+  # generating ids for users
+  uuid: ^3.0.7
+
+  # state management
+  flutter_riverpod: ^2.3.7
+
+  # show toast message
+  fluttertoast: ^8.2.2
+
+  # pick images
+  image_picker: ^1.0.2
+
+  # play videos
+  video_player: ^2.0.4
+
+  # for displaying the stories
+  story_view: ^0.15.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -17,3 +50,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
