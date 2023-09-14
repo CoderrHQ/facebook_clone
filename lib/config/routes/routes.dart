@@ -1,6 +1,7 @@
 import 'package:facebook_clone/core/screens/error_screen.dart';
 import 'package:facebook_clone/core/screens/home_screen.dart';
 import 'package:facebook_clone/features/auth/presentation/screens/create_account_screee.dart';
+import 'package:facebook_clone/features/posts/presentation/screens/create_post_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 class Routes {
@@ -13,6 +14,10 @@ class Routes {
       case HomeScreen.routeName:
         return _cupertinoRoute(
           const HomeScreen(),
+        );
+      case CreatePostScreen.routeName:
+        return _cupertinoRoute(
+          const CreatePostScreen(),
         );
       default:
         return _cupertinoRoute(

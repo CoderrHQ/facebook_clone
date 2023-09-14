@@ -1,3 +1,4 @@
+import 'package:facebook_clone/config/themes/app_theme.dart';
 import 'package:facebook_clone/core/screens/home_screen.dart';
 import 'package:facebook_clone/core/screens/loader.dart';
 import 'package:facebook_clone/features/auth/presentation/screens/login_screen.dart';
@@ -28,6 +29,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: AppTheme.appTheme(),
+      debugShowCheckedModeBanner: false,
       home: StreamBuilder(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {

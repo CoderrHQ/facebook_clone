@@ -2,13 +2,11 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:facebook_clone/core/constants/firebaes_collection_names.dart';
-import 'package:facebook_clone/core/constants/firebase_field_names.dart';
 import 'package:facebook_clone/core/constants/storage_folder_names.dart';
 import 'package:facebook_clone/core/utils/utils.dart';
 import 'package:facebook_clone/features/auth/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:uuid/uuid.dart';
 
 class AuthRepository {
   final _auth = FirebaseAuth.instance;

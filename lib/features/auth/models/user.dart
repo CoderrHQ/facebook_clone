@@ -52,12 +52,11 @@ class UserModel {
       password: map[FirebaseFieldNames.password] as String,
       profilePicUrl: map[FirebaseFieldNames.profilePicUrl] as String,
       uid: map[FirebaseFieldNames.uid] as String,
-      friends:
-          List<String>.from((map[FirebaseFieldNames.friends] as List<String>)),
-      sentRequests: List<String>.from(
-          (map[FirebaseFieldNames.sentRequests] as List<String>)),
-      receivedRequests: List<String>.from(
-          (map[FirebaseFieldNames.receivedRequests] as List<String>)),
+      friends: List<String>.from((map[FirebaseFieldNames.friends] ?? [])),
+      sentRequests:
+          List<String>.from((map[FirebaseFieldNames.sentRequests] ?? [])),
+      receivedRequests:
+          List<String>.from((map[FirebaseFieldNames.receivedRequests] ?? [])),
     );
   }
 }
