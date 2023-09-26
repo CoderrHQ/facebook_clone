@@ -1,8 +1,6 @@
-import 'dart:io';
-
-import 'package:facebook_clone/features/posts/presentation/widgets/network_video_view.dart';
-import 'package:facebook_clone/features/posts/presentation/widgets/video_view.dart';
 import 'package:flutter/material.dart';
+
+import '/features/posts/presentation/widgets/network_video_view.dart';
 
 class PostImageVideoView extends StatelessWidget {
   const PostImageVideoView({

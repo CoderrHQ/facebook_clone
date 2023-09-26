@@ -1,14 +1,15 @@
-import 'package:facebook_clone/core/constants/app_colors.dart';
-import 'package:facebook_clone/core/widgets/post_info_tile.dart';
-import 'package:facebook_clone/features/posts/models/post.dart';
-import 'package:facebook_clone/features/posts/presentation/widgets/icon_text_button.dart';
-import 'package:facebook_clone/features/posts/presentation/widgets/post_Image_video_view.dart';
-import 'package:facebook_clone/features/posts/presentation/widgets/round_like_icon.dart';
-import 'package:facebook_clone/features/posts/providers/posts_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '/core/constants/app_colors.dart';
+import '/core/widgets/post_info_tile.dart';
+import '/features/posts/models/post.dart';
+import '/features/posts/presentation/widgets/icon_text_button.dart';
+import '/features/posts/presentation/widgets/post_image_video_view.dart';
+import '/features/posts/presentation/widgets/round_like_icon.dart';
+import '/features/posts/providers/posts_provider.dart';
 
 class PostTile extends ConsumerWidget {
   const PostTile({super.key, required this.post});
