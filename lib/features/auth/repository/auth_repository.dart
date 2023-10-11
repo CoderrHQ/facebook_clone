@@ -78,9 +78,9 @@ class AuthRepository {
         password: password,
         profilePicUrl: downloadUrl,
         uid: FirebaseAuth.instance.currentUser!.uid,
-        friends: [],
-        sentRequests: [],
-        receivedRequests: [],
+        friends: const [],
+        sentRequests: const [],
+        receivedRequests: const [],
       );
 
       // save user to firestore

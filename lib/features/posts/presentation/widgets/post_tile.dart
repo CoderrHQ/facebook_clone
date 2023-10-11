@@ -1,3 +1,4 @@
+import 'package:facebook_clone/features/posts/presentation/screens/comments_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -88,9 +89,15 @@ class PostButtons extends ConsumerWidget {
                 .likeDislikePost(postId: post.postId, likes: post.likes);
           },
         ),
-        const IconTextButton(
+        IconTextButton(
           icon: FontAwesomeIcons.solidMessage,
           label: 'Comment',
+          onPressed: () {
+            Navigator.of(context).pushNamed(
+              CommentsScreen.routeName,
+              arguments: post.postId,
+            );
+          },
         ),
         const IconTextButton(
           icon: FontAwesomeIcons.share,

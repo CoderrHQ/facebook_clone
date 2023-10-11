@@ -11,7 +11,7 @@ class PostsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+    return const CustomScrollView(
       slivers: [
         FeedMakePostWidget(),
 

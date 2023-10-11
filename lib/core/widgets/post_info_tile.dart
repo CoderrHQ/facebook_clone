@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:facebook_clone/core/constants/extensions.dart';
 import 'package:facebook_clone/core/screens/loader.dart';
+import 'package:facebook_clone/core/screens/profile_screen.dart';
 import 'package:facebook_clone/features/auth/providers/get_user_info_by_id_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,8 +29,16 @@ class PostInfoTile extends ConsumerWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              CircleAvatar(
-                backgroundImage: NetworkImage(user.profilePicUrl),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    ProfileScreen.routeName,
+                    arguments: userId,
+                  );
+                },
+                child: CircleAvatar(
+                  backgroundImage: NetworkImage(user.profilePicUrl),
+                ),
               ),
               const SizedBox(width: 10),
               Column(
