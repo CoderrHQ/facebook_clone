@@ -1,16 +1,16 @@
-import 'package:facebook_clone/core/constants/app_colors.dart';
-import 'package:facebook_clone/core/constants/constants.dart';
-import 'package:facebook_clone/core/constants/extensions.dart';
-import 'package:facebook_clone/core/screens/error_screen.dart';
-import 'package:facebook_clone/core/screens/loader.dart';
-import 'package:facebook_clone/core/widgets/round_button.dart';
-import 'package:facebook_clone/features/auth/providers/get_user_info_as_stream_by_id_provider.dart';
-import 'package:facebook_clone/features/auth/providers/get_user_info_by_id_provider.dart';
-import 'package:facebook_clone/features/friends/presentation/widgets/add_friend_button.dart';
-import 'package:facebook_clone/features/posts/presentation/widgets/icon_text_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '/core/constants/app_colors.dart';
+import '/core/constants/constants.dart';
+import '/core/constants/extensions.dart';
+import '/core/screens/error_screen.dart';
+import '/core/screens/loader.dart';
+import '/core/widgets/round_button.dart';
+import '/features/auth/providers/get_user_info_as_stream_by_id_provider.dart';
+import '/features/friends/presentation/widgets/add_friend_button.dart';
+import '/features/posts/presentation/widgets/icon_text_button.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({
