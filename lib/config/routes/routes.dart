@@ -1,14 +1,14 @@
-import 'package:facebook_clone/core/screens/error_screen.dart';
-import 'package:facebook_clone/core/screens/home_screen.dart';
-import 'package:facebook_clone/core/screens/profile_screen.dart';
-import 'package:facebook_clone/features/auth/presentation/screens/create_account_screee.dart';
-import 'package:facebook_clone/features/posts/presentation/screens/comments_screen.dart';
-import 'package:facebook_clone/features/posts/presentation/screens/create_post_screen.dart';
-import 'package:facebook_clone/features/story/models/story.dart';
-import 'package:facebook_clone/features/story/presentation/screens/create_story_screen.dart';
-import 'package:facebook_clone/features/story/presentation/screens/story_view_screen.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:story_view/story_view.dart';
+
+import '/core/screens/error_screen.dart';
+import '/core/screens/home_screen.dart';
+import '/core/screens/profile_screen.dart';
+import '/features/auth/presentation/screens/create_account_screee.dart';
+import '/features/posts/presentation/screens/comments_screen.dart';
+import '/features/posts/presentation/screens/create_post_screen.dart';
+import '/features/story/models/story.dart';
+import '/features/story/presentation/screens/create_story_screen.dart';
+import '/features/story/presentation/screens/story_view_screen.dart';
 
 class Routes {
   static Route onGenerateRoute(RouteSettings settings) {
