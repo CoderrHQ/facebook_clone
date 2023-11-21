@@ -3,6 +3,7 @@ import 'package:facebook_clone/core/screens/loader.dart';
 import 'package:facebook_clone/features/posts/presentation/widgets/make_post_widget.dart';
 import 'package:facebook_clone/features/posts/presentation/widgets/post_tile.dart';
 import 'package:facebook_clone/features/posts/providers/get_all_posts_provider.dart';
+import 'package:facebook_clone/features/story/presentation/screens/stories_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,6 +15,15 @@ class PostsScreen extends StatelessWidget {
     return const CustomScrollView(
       slivers: [
         FeedMakePostWidget(),
+        SliverToBoxAdapter(
+          child: SizedBox(height: 8),
+        ),
+
+        // Stories View
+        StoriesView(),
+        SliverToBoxAdapter(
+          child: SizedBox(height: 8),
+        ),
 
         // displays list of posts
         PostsList(),
