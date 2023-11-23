@@ -1,3 +1,4 @@
+import 'package:facebook_clone/features/chat/presentation/screens/chat_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -60,6 +61,19 @@ class ProfileScreen extends ConsumerWidget {
                       : AddFriendButton(
                           user: user,
                         ),
+                  const SizedBox(height: 10),
+                  RoundButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(
+                        ChatScreen.routeName,
+                        arguments: {
+                          'userId': userId,
+                        },
+                      );
+                    },
+                    label: 'Send Message',
+                    color: Colors.transparent,
+                  ),
                   const SizedBox(height: 20),
                   _buildProfileInfo(
                     email: user.email,

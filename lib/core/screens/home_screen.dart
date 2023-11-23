@@ -1,6 +1,7 @@
 import 'package:facebook_clone/core/constants/app_colors.dart';
 import 'package:facebook_clone/core/constants/constants.dart';
 import 'package:facebook_clone/core/widgets/round_icon_button.dart';
+import 'package:facebook_clone/features/chat/presentation/screens/chats_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -71,7 +72,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         icon: FontAwesomeIcons.magnifyingGlass,
       );
 
-  Widget _buildMessengerWidget() => const RoundIconButton(
-        icon: FontAwesomeIcons.facebookMessenger,
+  Widget _buildMessengerWidget() => InkWell(
+        onTap: () {
+          Navigator.of(context).pushNamed(ChatsScreen.routeName);
+        },
+        child: const RoundIconButton(
+          icon: FontAwesomeIcons.facebookMessenger,
+        ),
       );
 }

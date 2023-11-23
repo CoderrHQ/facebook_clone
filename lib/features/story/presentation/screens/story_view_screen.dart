@@ -52,6 +52,7 @@ class _StoryViewScreenState extends State<StoryViewScreen> {
 
 class StoryDetailScreen extends ConsumerStatefulWidget {
   const StoryDetailScreen({
+    super.key,
     required this.story,
   });
 

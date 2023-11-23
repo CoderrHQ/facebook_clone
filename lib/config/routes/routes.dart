@@ -1,3 +1,7 @@
+import 'dart:ffi';
+
+import 'package:facebook_clone/features/chat/presentation/screens/chat_screen.dart';
+import 'package:facebook_clone/features/chat/presentation/screens/chats_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 import '/core/screens/error_screen.dart';
@@ -47,6 +51,18 @@ class Routes {
           StoryViewScreen(
             stories: stories,
           ),
+        );
+      case ChatScreen.routeName:
+        final arguments = settings.arguments as Map<String, dynamic>;
+        final userId = arguments['userId'] as String;
+        return _cupertinoRoute(
+          ChatScreen(
+            userId: userId,
+          ),
+        );
+      case ChatsScreen.routeName:
+        return _cupertinoRoute(
+          const ChatsScreen(),
         );
       default:
         return _cupertinoRoute(
